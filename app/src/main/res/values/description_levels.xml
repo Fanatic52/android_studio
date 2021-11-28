@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="levelone">Вибиріть найбільшу цифру.</string>
+    <string name="levelone">Вибиріть найбільшу цифру. \nПитання будуть повторятись, поки ви не наберете 20 очків.</string>
+    <string name="levelone_end">Поздровляю, ви пройшли перший рівень, ваш iq 200+.
+        \n\nЦей рівень змогли пройти тільки 1% людей від 1 всіх людей!
+    </string>
 </resources>

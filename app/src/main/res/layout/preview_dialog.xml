@@ -20,11 +20,11 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/button_stroke_black95_press_white"
-                android:text="X"
+                android:text="&#60;"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:gravity="center"
-                android:layout_gravity="end"/>
+                android:layout_gravity="start"/>
             <ImageView
                 android:id="@+id/previewimg"
                 android:layout_width="match_parent"

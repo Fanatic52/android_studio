@@ -219,25 +219,57 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/img_left"
+                <FrameLayout
+                    android:id="@+id/line3_1"
                     android:layout_width="match_parent"
                     android:layout_height="320dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/style_img_universal"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/imgtest" />
+                    android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/img_right"
+                    <ImageView
+                        android:id="@+id/img_left_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/style_img_universal"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/imgtest" />
+
+                    <ImageView
+                        android:id="@+id/img_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/style_img_universal"
+                        android:hapticFeedbackEnabled="false"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/onelevel_one" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/line3_2"
                     android:layout_width="match_parent"
                     android:layout_height="320dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/style_img_universal"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/imgtest" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_right_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/style_img_universal"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/imgtest" />
+
+                    <ImageView
+                        android:id="@+id/img_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/style_img_universal"
+                        android:hapticFeedbackEnabled="false"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/onelevel_one" />
+                </FrameLayout>
             </LinearLayout>
             <!--line_3_levelContentName-->
             <LinearLayout

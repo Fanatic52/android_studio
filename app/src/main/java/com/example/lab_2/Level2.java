@@ -1,7 +1,5 @@
 package com.example.lab_2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -16,14 +14,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level1 extends AppCompatActivity {
+public class Level2 extends AppCompatActivity {
 
     private Dialog dialog;
-    private Dialog dialogEnd;
 
     public int numLeft;
     public int numRight;
@@ -38,7 +36,7 @@ public class Level1 extends AppCompatActivity {
 
         //rename TV 'current name'
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.level1);
+        text_levels.setText(R.string.level2);
 
 
         //round corners for images left and right
@@ -74,7 +72,7 @@ public class Level1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent = new Intent(Level1.this, GameLevels.class); // create action for jump into another class
+                    Intent intent = new Intent(Level2.this, GameLevels.class); // create action for jump into another class
                     startActivity(intent); // use action
                     finish(); // close this class
                 }
@@ -95,49 +93,6 @@ public class Level1 extends AppCompatActivity {
         // show dialog window
         dialog.show();
 
-        //_____________________________
-
-        //call dialog window in end game
-        dialogEnd = new Dialog(this); // create dialog window
-        dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE); //hide title
-        dialogEnd.setContentView(R.layout.end_dialog);
-        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //add opacity for dialog window
-        dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.MATCH_PARENT);
-        dialogEnd.setCancelable(false); // window cannot close with button 'back'
-
-        //button for close dialog window
-        TextView btnClose2 = (TextView) dialogEnd.findViewById(R.id.btnclose);
-        btnClose2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    Intent intent = new Intent(Level1.this, GameLevels.class); // create action for jump into another class
-                    startActivity(intent); // use action
-                    finish(); // close this class
-                }
-                catch (Exception e) {}
-                dialogEnd.dismiss(); // close dialog window
-            }
-        });
-
-        //button for continue
-        Button btnContinue2 = (Button) dialogEnd.findViewById(R.id.btncontinue);
-        btnContinue2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    Intent intent = new Intent(Level1.this, Level2.class); // create action for jump into another class
-                    startActivity(intent); // use action
-                    finish(); // close this class
-                }
-                catch (Exception ex) {}
-                dialogEnd.dismiss(); // close dialog window
-            }
-        });
-
-        //_____________________________
-
 
         //button 'back'
         Button btnBack = (Button) findViewById(R.id.button_back);
@@ -145,7 +100,7 @@ public class Level1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent = new Intent(Level1.this, GameLevels.class); // create action for jump into another class
+                    Intent intent = new Intent(Level2.this, GameLevels.class); // create action for jump into another class
                     startActivity(intent); // use action
                     finish(); // close this class
                 }
@@ -162,7 +117,7 @@ public class Level1 extends AppCompatActivity {
 
 
         //connect animation
-        final Animation a = AnimationUtils.loadAnimation(Level1.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level2.this, R.anim.alpha);
 
 
         //set random left/right image and left/right TV
@@ -232,7 +187,7 @@ public class Level1 extends AppCompatActivity {
                     }
                     // exit from game if level is 20
                     if(count == 20) {
-                        dialogEnd.show();
+
                     }
                     else {
                         //set random left/right image and left/right TV
@@ -311,7 +266,7 @@ public class Level1 extends AppCompatActivity {
                     }
                     // exit from game if level is 20
                     if(count == 20) {
-                        dialogEnd.show();
+
                     }
                     else {
                         //set random left/right image and left/right TV
@@ -340,7 +295,7 @@ public class Level1 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level1.this, GameLevels.class); // create action for jump into another class
+            Intent intent = new Intent(Level2.this, GameLevels.class); // create action for jump into another class
             startActivity(intent); // use action
             finish(); // close this class
         }
